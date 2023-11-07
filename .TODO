@@ -4,6 +4,6 @@ help command
 level system
 lock command **done**
 twitch streams notif **done**
-youtube videos notif
+youtube videos notif**done**
 fix server boost
 giveaways

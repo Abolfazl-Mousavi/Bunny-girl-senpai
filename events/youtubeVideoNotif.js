@@ -7,7 +7,7 @@ const LatestYoutubeVideos = require("../schemas/latestYoutubeVideos");
 
 //.ENV
 require("dotenv/config");
-const youtubeID = `UCWwuijyo4x78iXup5hOvkbw`; //process.env.YOUTUBE_CHANNEL_ID;
+const youtubeID = process.env.YOUTUBE_CHANNEL_ID;
 
 const endpoint = `https://www.youtube.com/feeds/videos.xml?channel_id=${youtubeID}`;
 module.exports = {
@@ -28,7 +28,7 @@ module.exports = {
         db.LastVideo = videos.items[0];
         db.save();
         channel.send(
-          `<@&1164633871111958558> ${db.Author}'s new video is out!\n${db.LastVideo.link}`
+          `@everyone ${db.Author}'s new video is out!\n${db.LastVideo.link}`
         );
       }
     }, 5 * 60 * 1000);

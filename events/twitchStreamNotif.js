@@ -57,7 +57,7 @@ async function sendNotif(client) {
 
   const channel = client.channels.cache.get(`1103397339437215896`);
   channel.send({
-    content: `<@&${twitchNotifRole}> I'm live on Twitch <:Twitch:1163423501059899473>
+    content: `@everyone I'm live on Twitch <:Twitch:1163423501059899473>
 `,
     embeds: [twitchEmbed],
   });
