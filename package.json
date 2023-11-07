@@ -1,0 +1,30 @@
+{
+  "name": "bunny-senpai",
+  "version": "1.0.0",
+  "description": "My personal discord bot. this version is only for test ",
+  "main": "main.js",
+  "scripts": {
+    "bunny-full": "concurrently \"node rpc.js\" \"node main.js\" \"cd music && java -jar JMusicBot-0.3.9.jar\"",
+    "bunny": "npx nodemon main.js",
+    "RPC": "npx nodemon rpc.js",
+    "ongaku": "concurrently \"cd music && java -jar JMusicBot-0.3.9.jar\""
+  },
+  "keywords": [],
+  "author": "VictorSnapi",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@discordjs/opus": "^0.9.0",
+    "axios": "^1.5.1",
+    "discord-rpc": "^4.0.1",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "mongodb": "^6.1.0",
+    "mongoose": "^7.6.1",
+    "nodemon": "^3.0.1",
+    "rss-parser": "^3.13.0",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0"
+  }
+}
