@@ -7,12 +7,12 @@ const RPC = new DiscordRPC.Client({ transport: "ipc" });
 DiscordRPC.register(clientID);
 
 //constants
-const details = "Front-end Dev in love with bunnys";
+const details = "Front-end Dev learning about Eiai";
 const state = "watching Anime! or Editing code";
 const setTimestamp = Date.now()-365*24*60*60*1000;
-const largeImageKey = "https://media.tenor.com/Hv24uVATiywAAAAd/bunny.gif";
-const largeImageText = "何を見ているの？";
-const smallImageKey = "bunnyimage";
+const largeImageKey = "https://s9.gifyu.com/images/SFLXV.gif"
+const largeImageText = "こちのほわ効率的です";
+const smallImageKey = "EiaiImage";
 
 const intents = false;
 const buttons = [
