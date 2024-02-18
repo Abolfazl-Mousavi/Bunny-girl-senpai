@@ -7,6 +7,9 @@ module.exports = {
   async execute(message) {
     if (message.author.bot) return;
 
-    message.channel.send(`<@${message.author.id}>${message.content}`);
+    const db = await counting.findOne({ GuildID: message.guild.id });
+    if (parseInt(message.content === db.Number - 1)) {
+      message.channel.send(`<@${message.author.id}>${message.content}`);
+    }
   },
 };
