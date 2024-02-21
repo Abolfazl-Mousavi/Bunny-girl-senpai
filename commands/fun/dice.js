@@ -11,11 +11,9 @@ module.exports = {
         .setRequired(true)
     ),
   async execute(interaction) {
+    const sides = interaction.options.getNumber("sides");
     await interaction.reply({
-      content: throwDice(),
+      content: `${Math.floor(Math.random() * (sides - 1) + 1)}`,
     });
   },
 };
-function throwDice(max) {
-  return Math.floor(Math.random() * (max - 1) + 1);
-}
